@@ -1,21 +1,27 @@
 from visualization import visualize_board, visualize_start_goals
 
-def setup_board(player_count: int):
-    board = [0 for _ in range(15*player_count)]
-    mapping = {player_idx: player_idx*16 for player_idx in range(player_count)}
-    safe_house = [[0,0,0,0] for _ in range(player_count)]
+
+class game():
+    def __init__(self, player_count, simulation_run_count):
+        self.player_count = player_count
+        self.N = simulation_run_count
+        self.board = self.setup_board(player_count=player_count)
+        self.starts = [4 for _ in range(player_count)]
+        self.safe_house = [[0,0,0,0] for _ in range(player_count)]
     
-    return board
+
+    def setup_board(self):
+        board = [0 for _ in range(15*self.player_count)]
+        return board
 
 
-def simulation(n: int):
-    board = setup_board(4)
-    starts, goals = [4, 4, 4, 4], [[0, 0, 0, 0] for _ in range(4)]
-    visualize_board(board)
-    visualize_start_goals(starts, goals)
-    for simulation_run in range(n):
-        pass
+    def simulate(self):
+        visualize_board(self.board)
+        visualize_start_goals(self.starts, self.safe_house)
+        for simulation_run in range(self.N):
+            pass
 
 
 if __name__ == "__main__":
-    simulation(1000)
+    game = game(4, 1000)
+    game.simulate()

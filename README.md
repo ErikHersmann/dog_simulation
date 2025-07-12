@@ -1,4 +1,4 @@
-# Simmulating this stuff
+# Simulating this stuff
 
 - 4 Spots before the start for 4-6 players (let's assume 4 for the sake of the argument here)
 - 15 Spots (including the start of the next player, excluding your own start) and then 4 spots as safe spots connected to the start
@@ -8,13 +8,16 @@
 
 ## Issues
 
-- make game a class
+- class for cards
 - team play
 - shuffle cards (read up on rules)
 - win conditions (ruor)
-- generalize to n players
-- generalize to non-team
 - strategies definition for simulation
 - forced moves (ruor)
 - forced discard (ruor)
-- class for cards
+
+## Feature ideas
+
+- extended board
+- generalize to n players
+- generalize to non-team
