@@ -1,13 +1,16 @@
+from copy import deepcopy
+
 def print_at(x: int, value: int):
     print(" " * (x) + str(value), end="")
 
 
 def visualize_start_goals(starts, goals):
     for player in range(4):
-        print(f'{player}: start ({",".join("X" for _ in range(starts[player]))}) saved {goals[player]}')
+        print(f'{player}: start ({[spot.value for spot in starts[player]]}) saved {[spot.value for spot in goals[player]]}')
 
-def visualize_board(board):
-    if len(board) != 60: return
+def visualize_board(board_ref):
+    if len(board_ref) != 60: return
+    board = [spot.value for spot in board_ref]
     row_mapping = {
         0: [0, 1, 2, 3, 4, 5],
         1: [6, 59],
