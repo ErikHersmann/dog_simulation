@@ -26,7 +26,6 @@
 ## Roadmap
 
 - Finish board setup
-    - Spots
     - Cards
     - Initial setup
 - Finish random strategy
