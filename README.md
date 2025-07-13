@@ -15,9 +15,20 @@
 - strategies definition for simulation
 - forced moves (ruor)
 - forced discard (ruor)
+- trading cards pre round
 
 ## Feature ideas
 
 - extended board
 - generalize to n players
 - generalize to non-team
+
+## Roadmap
+
+- Finish board setup
+    - Spots
+    - Cards
+    - Initial setup
+- Finish random strategy
+- Finish win conditions
+- Finish full simulation run and verify manually from visualization
